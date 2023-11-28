@@ -34,3 +34,9 @@ input_true:
       li $v0, 1   #syscall (System call) for print_str
       move $a0, $t1   #load current fibonacci number
       syscall
+
+      #Calculate next fibonacci number
+      add $t4, $t1, $t2   #$t4 = $t1 + $t2
+      move $t1, $t2   #update $t1 to the next number in sequence
+      move $t2, $t4   #move the next Fibonacci number to the second
+
