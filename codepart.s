@@ -45,4 +45,10 @@ input_true:
       bne $t3, $t0, fibonacci_loop #loop if the counter is less than enter number
 
       #print a newline
+      li $v0, 4   #system call (syscall) for print_str
+      la $a0, newline #load address of newline
+      syscall
+  #Exit program
+  li $v0, 10  #syscall 10 for exit
+  syscall
 
