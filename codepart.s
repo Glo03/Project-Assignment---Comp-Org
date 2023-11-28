@@ -39,4 +39,10 @@ input_true:
       add $t4, $t1, $t2   #$t4 = $t1 + $t2
       move $t1, $t2   #update $t1 to the next number in sequence
       move $t2, $t4   #move the next Fibonacci number to the second
+      addi $t3, $t3, 1  #increment the counter
+
+      #Check if we have printed enter numbers
+      bne $t3, $t0, fibonacci_loop #loop if the counter is less than enter number
+
+      #print a newline
 
