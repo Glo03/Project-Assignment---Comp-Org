@@ -28,3 +28,9 @@ input_true:
   li $t1, 0   #first fibonacci number
   li $t2, 1   #second fibonacci number
   li $t3, 0   #counter
+
+  fibonacci_loop:
+      #print the current fibonacci number
+      li $v0, 1   #syscall (System call) for print_str
+      move $a0, $t1   #load current fibonacci number
+      syscall
