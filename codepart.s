@@ -18,3 +18,8 @@ main:
   move $t0, $v0   #save user input in $t0
 
   #Verify if the entered number is valid
+  bge $t0, 25, input_true #Branch if the enter a number >= 25
+  li $v0, 4   #system call (syscall) for print_str
+  la $a0, error_msg   #Load the address of the error message
+  syscall
+  j main  #jump back to the beginning of the main
