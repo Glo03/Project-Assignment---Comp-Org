@@ -38,7 +38,7 @@ input_true:
       #Calculate next fibonacci number
       add $t4, $t1, $t2   #$t4 = $t1 + $t2
       move $t1, $t2   #update $t1 to the next number in sequence
-      move $t2, $t4   #move the next Fibonacci number to the second
+      move $t2, $t4   #moving the next Fibonacci number to the second
       addi $t3, $t3, 1  #increment the counter
 
       #Check if we have printed enter numbers
