@@ -23,3 +23,8 @@ main:
   la $a0, error_msg   #Load the address of the error message
   syscall
   j main  #jump back to the beginning of the main
+input_true:
+  #initial variable for Fibonacci sequence
+  li $t1, 0   #first fibonacci number
+  li $t2, 1   #second fibonacci number
+  li $t3, 0   #counter
